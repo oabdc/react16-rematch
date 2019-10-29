@@ -51,7 +51,7 @@
     "babel-register": "^6.22.0",
     "connect-history-api-fallback": "^1.5.0",
     "css-loader": "^0.28.11",
-    "eslint": "^3.12.2",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-import": "^2.2.0",
