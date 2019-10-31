@@ -6,7 +6,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const webpackConfigProd = {
     entry: './src/main',
     mode: 'production',
@@ -55,7 +55,6 @@ const webpackConfigProd = {
         ],
     },
     plugins: [
-        // new BundleAnalyzerPlugin(),
         new HtmlWebpackPlugin({
             filename: process.env.NODE_ENV === 'testing'
                 ? 'index.html'
@@ -69,6 +68,8 @@ const webpackConfigProd = {
             filename: 'static/css/[name].[contenthash:8].css',
             chunkFilename: 'static/css/[name].[contenthash:8].css',
         }),
+        new webpack.IgnorePlugin(/\.\/locale/,/moment/),
+        new BundleAnalyzerPlugin({ analyzerPort: 8919 }),
     ],
 };
 const spinner = ora('building for production...');

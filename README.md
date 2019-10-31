@@ -30,5 +30,14 @@ npm run build
 ├─index.html   模版文件
 |
 ```
+- 1.0.1
+
+使用web-dev-server代替hot-middleware 简化配置，
+moker-api代替moke，简化moke数据方式
+
+- 1.0.2
+
+优化打包体积，（antd内置moment，moment语言包体积较大，可webpack忽略第三方包，需要时指定引入）
+
 
 

@@ -3,21 +3,21 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
-const babelQuery = {
-    plugins: [
-        ['external-helpers'],
-        ['babel-plugin-transform-runtime'],
-        ['transform-decorators-legacy'],
-        ['transform-runtime'],
-        ['import', [{ libraryName: 'antd', style: true }]],
-        // ["react-loadable/babel"],
-    ],
-    presets: [
-        'es2015',
-        'stage-2',
-        'react',
-    ],
-};
+// const babelQuery = {
+//     plugins: [
+//         ['external-helpers'],
+//         ['babel-plugin-transform-runtime'],
+//         ['transform-decorators-legacy'],
+//         ['transform-runtime'],
+//         ['import', [{ libraryName: 'antd', style: true }]],
+//         // ["react-loadable/babel"],
+//     ],
+//     presets: [
+//         'es2015',
+//         'stage-2',
+//         'react',
+//     ],
+// };
 module.exports = {
     // 出口，指定编译文件路径，和命名
     output: {
@@ -45,7 +45,7 @@ module.exports = {
                 enforce: 'pre',
                 use: [{
                     loader: 'eslint-loader',
-                    options: { fix: true },
+                    // options: { fix: true },
                 }],
                 include: path.resolve(__dirname, './src/**/*.js'),
                 exclude: /node_modules/,
@@ -55,7 +55,7 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 // include: [path.resolve('__dirname', 'src')],
-                query: babelQuery,
+                // query: babelQuery,
             },
             {
                 test: /\.css$/,

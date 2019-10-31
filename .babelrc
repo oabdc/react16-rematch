@@ -1,0 +1,15 @@
+{
+     "plugins": [
+         ["external-helpers"],
+         ["babel-plugin-transform-runtime"],
+         ["transform-decorators-legacy"],
+         ["transform-runtime"],
+         ["import", [{ "libraryName": "antd", "style": true }]]
+         // ["react-loadable/babel"],
+     ],
+     "presets": [
+         "es2015",
+         "stage-2",
+         "react"
+     ]
+ }

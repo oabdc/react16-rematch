@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import './style.less';
 
-export default class Index extends React.Component {
-    render() {
-        return (
-            <div>22da2</div>
-        );
-    }
+const mapState = ({ common }) => {
+    return {
+        city: common.city,
+    };
+};
+const mapDispatch = ({ common }) => {
+    return {
+        getCity: common.getCity,
+    };
+};
+
+function Home(props) {
+    useEffect(() => {
+        props.getCity();
+    });
+    return (
+        <div>111</div>
+    );
 }
+
+const HomeManage = connect(mapState, mapDispatch)(Home);
+export default HomeManage;
