@@ -3,9 +3,14 @@ import { main, Switch, Route } from 'react-router-dom';
 import * as load from './routerComponents';
 const ROUTE = [
     {
+        path: '/about',
+        component: load.about,
+    },
+    {
         path: '/',
         component: load.home,
     },
+    
 ];
 class Main extends React.Component {
     render() {

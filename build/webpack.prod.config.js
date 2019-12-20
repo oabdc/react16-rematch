@@ -68,7 +68,7 @@ const webpackConfigProd = {
             filename: 'static/css/[name].[contenthash:8].css',
             chunkFilename: 'static/css/[name].[contenthash:8].css',
         }),
-        new webpack.IgnorePlugin(/\.\/locale/,/moment/),
+        new webpack.IgnorePlugin(/\.\/locale/, /moment/),
         new BundleAnalyzerPlugin({ analyzerPort: 8919 }),
     ],
 };

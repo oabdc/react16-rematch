@@ -1,5 +1,7 @@
 > react16.0 + rematch + react-router4.0 + axios + webpack4.0 + antd + eslint + mock + less
 
+此项目会把 react项目搭建最佳实践方案 在此更新
+
 ## 1.使用简介
 
 推荐使用nvm维护node版本

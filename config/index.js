@@ -3,7 +3,7 @@ const proxyConfig = require('./dev.proxy');
 module.exports = {
     build: {
         assetsRoot: path.resolve(__dirname, '../dist'),
-        index: path.resolve(__dirname, '../dist/template/react/index.html'),
+        index: path.resolve(__dirname, '../dist/template/index.html'),
         productionGzipExtensions: ['js', 'css'],
     },
     dev: {

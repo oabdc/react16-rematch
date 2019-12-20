@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import './style.less';
+// import './style.less';
 
 const mapState = ({ common }) => {
     return {
@@ -14,17 +14,14 @@ const mapDispatch = ({ common }) => {
     };
 };
 
-function Home(props) {
-    // useEffect(() => {
-    //     props.getCity();
-    // });
+function About(props) {
     return (
         <div>
-            <NavLink to="/about">jump about</NavLink>
-            <div>我是index</div>
+            <NavLink to="/">jump index</NavLink>
+            <div>我是about</div>
             </div>
     );
 }
 
-const HomeManage = connect(mapState, mapDispatch)(Home);
-export default HomeManage;
+const Wrap = connect(mapState, mapDispatch)(About);
+export default Wrap;

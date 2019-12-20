@@ -28,7 +28,11 @@ module.exports = {
         // [name] 被 chunk 的 name 替换。
         // [hash] 被 compilation 生命周期的 hash 替换。
         // [chunkhash] 被 chunk 的 hash 替换。
-        publicPath: devMode ? '/' : 'https://www.lgstatic.com/alpha/',
+
+
+        // publicPath: devMode ? '/' : 'https://www.lgstatic.com/alpha/',
+        // 大型项目 静态资源会发布cdn 此处为了测试我们都放在服务器中
+        publicPath: devMode ? '/' : '../',
     },
     //
     resolve: {
