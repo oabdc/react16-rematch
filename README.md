@@ -5,12 +5,18 @@
 ## 1.使用简介
 
 推荐使用nvm维护node版本
-node 10.0.0
+
+node 10.0.0及以上
+
 npm install
 
 npm run dev
 
 npm run build
+
+## host
+
+127.0.0.1 				localhost
 
 ## 2.项目结构
 ```
@@ -35,7 +41,7 @@ npm run build
 - 1.0.1
 
 使用web-dev-server代替hot-middleware 简化配置，
-moker-api代替moke，简化moke数据方式
+mocker-api代替mock，简化mock数据方式
 
 - 1.0.2
 

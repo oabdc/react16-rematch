@@ -1,27 +1,25 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-// import './style.less';
-
-const mapState = ({ common }) => {
-    return {
-        city: common.city,
-    };
-};
-const mapDispatch = ({ common }) => {
-    return {
-        getCity: common.getCity,
-    };
-};
-
-function About(props) {
-    return (
-        <div>
-            <NavLink to="/">jump index</NavLink>
-            <div>我是about</div>
-            </div>
-    );
+import GetDerivedStateFromProps from './GetDerivedStateFromProps.js';
+import GetSnapshotBeforeUpdate from './GetSnapshotBeforeUpdate.js';
+import Hooks from './Hooks.js';
+export default class About extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            num: 1,
+        };
+    }
+    render() {
+        return (
+            <div>
+                {/* 16.8生命周期 */}
+                {/* <GetDerivedStateFromProps num="2" /> */}
+                {/* <GetSnapshotBeforeUpdate /> */}
+                <Hooks num="0" />
+                </div>
+        );
+    }
 }
 
-const Wrap = connect(mapState, mapDispatch)(About);
-export default Wrap;
